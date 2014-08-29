@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:onb="http://com.onb.training/ws/schemas" 
+	elementFormDefault="qualified"
+	targetNamespace="http://com.onb.training/ws/schemas"> 
+	
+	<element name="EmployeeRequest" >
+		<complexType>
+			<sequence>
+				<element name="EmployeeId" type="long" /> 
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="EmployeeResponse" >
+		<complexType>
+			<sequence>
+				<element name="Employee" type="onb:EmployeeType" /> 
+			</sequence>
+		</complexType>
+	</element>
+	
+	<complexType name="EmployeeType">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="age" type="int" />
+			<element name="gender" type="string" />
+		</sequence>
+	</complexType>
+</schema>
